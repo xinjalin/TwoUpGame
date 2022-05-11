@@ -39,7 +39,7 @@ public class GUITwoUp {
         gridBag = new GridBagLayout();
         c = new GridBagConstraints();
 
-        gameResult = new JLabel("Victory", SwingConstants.CENTER);
+        gameResult = new JLabel("Result of Game", SwingConstants.CENTER);
 
         playerNameLabel = new JLabel("Enter Players Name");
         playerNameTextField = new JTextField(15);
@@ -74,6 +74,10 @@ public class GUITwoUp {
             coinOneLabel.setFont(new Font("Dialog", Font.BOLD, 9));
             coinTwoLabel.setFont(new Font("Dialog", Font.BOLD, 9));
             coinFlipButton.setFont(new Font("Dialog", Font.BOLD, 9));
+            playerNameLabel.setFont(new Font("Dialog", Font.BOLD, 9));
+            HEADS_HEADS.setFont(new Font("Dialog", Font.BOLD, 9));
+            TAILS_TAILS.setFont(new Font("Dialog", Font.BOLD, 9));
+            gameResult.setFont(new Font("Dialog", Font.BOLD, 9));
         });
         // return font to default size
         submenu.add(i5);
@@ -81,6 +85,10 @@ public class GUITwoUp {
             coinOneLabel.setFont(new Font("Dialog", Font.BOLD, 12));
             coinTwoLabel.setFont(new Font("Dialog", Font.BOLD, 12));
             coinFlipButton.setFont(new Font("Dialog", Font.BOLD, 12));
+            playerNameLabel.setFont(new Font("Dialog", Font.BOLD, 12));
+            HEADS_HEADS.setFont(new Font("Dialog", Font.BOLD, 12));
+            TAILS_TAILS.setFont(new Font("Dialog", Font.BOLD, 12));
+            gameResult.setFont(new Font("Dialog", Font.BOLD, 12));
         });
         // set font to larger size
         submenu.add(i6);
@@ -88,35 +96,31 @@ public class GUITwoUp {
             coinOneLabel.setFont(new Font("Dialog",Font.BOLD, 15));
             coinTwoLabel.setFont(new Font("Dialog", Font.BOLD, 15));
             coinFlipButton.setFont(new Font("Dialog", Font.BOLD, 15));
+            playerNameLabel.setFont(new Font("Dialog", Font.BOLD, 15));
+            HEADS_HEADS.setFont(new Font("Dialog", Font.BOLD, 15));
+            TAILS_TAILS.setFont(new Font("Dialog", Font.BOLD, 15));
+            gameResult.setFont(new Font("Dialog", Font.BOLD, 15));
         });
         menu.add(submenu);
         mb.add(menu);
 
         // main content layout
         cp.setLayout(gridBag);
-
-
-        // button press call method to flip coins & updates labels with new coin values
-        buttonPanel.add(coinFlipButton);
-        coinFlipButton.addActionListener(e -> {
-            coinOne.flip();
-            coinTwo.flip();
-            coinOneLabel.setText(coinOne.toString());
-            coinTwoLabel.setText(coinTwo.toString());
-        });
-
         //////////////////// current working on is in grid bag layout
         c.gridx = 0;
         c.gridy = 0;
         c.ipadx = 20;
         c.ipady = 5;
         cp.add(playerNameLabel, c);
+
         c.gridx = 1;
         c.gridy = 0;
         cp.add(playerNameTextField, c);
+
         c.gridx = 0;
         c.gridy = 1;
         cp.add(coinOneLabel, c);
+
         c.gridx = 1;
         c.gridy = 1;
         cp.add(coinTwoLabel, c);
@@ -132,17 +136,34 @@ public class GUITwoUp {
         c.gridy = 2;
         cp.add(TAILS_TAILS, c);
 
-
         c.gridx = 0;
         c.gridy = 3;
         c.gridwidth = 2;
         cp.add(gameResult, c);
 
+        // button press call method to flip coins & updates labels with new coin values
+        // check radioButton is click or not
+        buttonPanel.add(coinFlipButton);
+        coinFlipButton.addActionListener(e -> {
+            coinOne.flip();
+            coinTwo.flip();
+            coinOneLabel.setText(coinOne.toString());
+            coinTwoLabel.setText(coinTwo.toString());
+
+            if (HEADS_HEADS.isSelected()) {
+                String selected = "HEADS_HEADS";
+                Game g = new Game();
+                gameResult.setText(g.gameOfTwoUp(coinOne.isHeads(), coinTwo.isHeads(), selected, playerNameTextField.getText()));
+            } else if (TAILS_TAILS.isSelected()) {
+                String selected = "TAILS_TAILS";
+                Game g = new Game();
+                gameResult.setText(g.gameOfTwoUp(coinOne.isHeads(), coinTwo.isHeads(), selected, playerNameTextField.getText()));
+            }
+        });
 
         // puts menu bar to top of the screen
         mainDisplay.getContentPane().add(BorderLayout.NORTH, mb);
         // puts content to screen
-        // mainDisplay.getContentPane().add(BorderLayout.CENTER, coinPanel);
         mainDisplay.getContentPane().add(BorderLayout.CENTER, cp);
         mainDisplay.getContentPane().add(BorderLayout.SOUTH, buttonPanel);
         // sets content visible

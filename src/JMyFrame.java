@@ -4,6 +4,7 @@ public class JMyFrame extends JFrame{
     public JMyFrame(){
         // title, frame size, default close option
         super("Template");
+        setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // centers frame on screen using .awt
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();

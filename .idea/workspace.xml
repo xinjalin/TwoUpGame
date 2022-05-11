@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c74c62da-847a-4de1-86c6-6ca430962615" name="Changes" comment="v0.1&#10;&#10;small application to run a two up game">
-      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+    <list default="true" id="c74c62da-847a-4de1-86c6-6ca430962615" name="Changes" comment="v0.2&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUITwoUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUITwoUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JMyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JMyFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WriteFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652165356374</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v0.2&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content">
+      <created>1652237267642</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652237267642</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -84,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v0.1&#10;&#10;small application to run a two up game" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.1&#10;&#10;small application to run a two up game" />
+    <MESSAGE value="v0.2&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.2&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content" />
   </component>
 </project>
