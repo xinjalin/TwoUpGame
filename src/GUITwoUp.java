@@ -9,13 +9,16 @@ public class GUITwoUp {
     private final JMenuItem i1, i2, i3, i4, i5, i6;
     private final JMenuBar mb;
     private final Container cp;
-    private final GridLayout grid;
+    private final GridBagLayout gridBag;
+    private final JLabel gameResult;
     private final JLabel coinOneLabel, coinTwoLabel;
-    private final JTextField playerName;
-    private final JPanel playerNamePanel;
-    private final JPanel coinPanel;
+    private final JLabel playerNameLabel;
+    private final JTextField playerNameTextField;
+    private final GridBagConstraints c;
     private final JPanel buttonPanel;
     private final JButton coinFlipButton;
+    private final JRadioButton HEADS_HEADS, TAILS_TAILS;
+    private final ButtonGroup radioGroup;
     private final Coin coinOne = new Coin(), coinTwo = new Coin();
 
     public GUITwoUp(int w,int h) {
@@ -33,17 +36,24 @@ public class GUITwoUp {
         i6 = new JMenuItem("Large");
 
         cp = new Container();
-        grid = new GridLayout(1,2);
+        gridBag = new GridBagLayout();
+        c = new GridBagConstraints();
 
-        playerName = new JTextField(15);
-        playerNamePanel = new JPanel();
+        gameResult = new JLabel("Victory", SwingConstants.CENTER);
+
+        playerNameLabel = new JLabel("Enter Players Name");
+        playerNameTextField = new JTextField(15);
 
         coinOneLabel = new JLabel(coinOne.toString());
         coinTwoLabel = new JLabel(coinTwo.toString());
-        coinPanel = new JPanel();
 
         coinFlipButton = new JButton("Flip Coins");
         buttonPanel = new JPanel();
+
+        HEADS_HEADS = new JRadioButton("2x HEADS");
+        TAILS_TAILS = new JRadioButton("2x TAILS");
+
+        radioGroup = new ButtonGroup();
 
         width = w;
         height = h;
@@ -82,11 +92,10 @@ public class GUITwoUp {
         menu.add(submenu);
         mb.add(menu);
 
-        // main content
-        // adding coins to coinPanel
-        coinPanel.add(coinOneLabel);
-        coinPanel.add(coinTwoLabel);
-        mainDisplay.getContentPane().add(coinPanel);
+        // main content layout
+        cp.setLayout(gridBag);
+
+
         // button press call method to flip coins & updates labels with new coin values
         buttonPanel.add(coinFlipButton);
         coinFlipButton.addActionListener(e -> {
@@ -96,12 +105,39 @@ public class GUITwoUp {
             coinTwoLabel.setText(coinTwo.toString());
         });
 
-        //////////////////// current working on is in grid layout
-        cp.setLayout(grid);
-        playerName.setBounds(50,100, 200,30);
-        playerNamePanel.add(playerName);
-        cp.add(playerNamePanel);
-        cp.add(coinPanel);
+        //////////////////// current working on is in grid bag layout
+        c.gridx = 0;
+        c.gridy = 0;
+        c.ipadx = 20;
+        c.ipady = 5;
+        cp.add(playerNameLabel, c);
+        c.gridx = 1;
+        c.gridy = 0;
+        cp.add(playerNameTextField, c);
+        c.gridx = 0;
+        c.gridy = 1;
+        cp.add(coinOneLabel, c);
+        c.gridx = 1;
+        c.gridy = 1;
+        cp.add(coinTwoLabel, c);
+
+        radioGroup.add(HEADS_HEADS);
+        radioGroup.add(TAILS_TAILS);
+
+        c.gridx = 0;
+        c.gridy = 2;
+        cp.add(HEADS_HEADS, c);
+
+        c.gridx = 1;
+        c.gridy = 2;
+        cp.add(TAILS_TAILS, c);
+
+
+        c.gridx = 0;
+        c.gridy = 3;
+        c.gridwidth = 2;
+        cp.add(gameResult, c);
+
 
         // puts menu bar to top of the screen
         mainDisplay.getContentPane().add(BorderLayout.NORTH, mb);
