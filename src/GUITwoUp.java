@@ -20,6 +20,8 @@ public class GUITwoUp {
     private final JRadioButton HEADS_HEADS, TAILS_TAILS;
     private final ButtonGroup radioGroup;
     private final Coin coinOne = new Coin(), coinTwo = new Coin();
+    private final ImageIcon popperImg;
+    private final JLabel popperLabel;
 
     public GUITwoUp(int w,int h) {
         mainDisplay = new JMyFrame();
@@ -57,6 +59,9 @@ public class GUITwoUp {
 
         width = w;
         height = h;
+
+        popperImg = new ImageIcon(new ImageIcon("images\\popper.gif").getImage().getScaledInstance(75,75,Image.SCALE_DEFAULT));
+        popperLabel = new JLabel();
     }
 
     public void setUpGUI() {
@@ -68,7 +73,7 @@ public class GUITwoUp {
         menu.add(i1);
         menu.add(i2);
         menu.add(i3);
-        // set font to smaller size
+
         submenu.add(i4);
         i4.addActionListener(e -> setFontSize(9));
         // return font to default size
@@ -147,6 +152,9 @@ public class GUITwoUp {
             }
         });
 
+
+        popperLabel.setIcon(popperImg);
+        mainDisplay.getContentPane().add(BorderLayout.WEST, popperLabel);
         // puts menu bar to top of the screen
         mainDisplay.getContentPane().add(BorderLayout.NORTH, mb);
         // puts content to screen

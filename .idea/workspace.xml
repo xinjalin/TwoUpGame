@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c74c62da-847a-4de1-86c6-6ca430962615" name="Changes" comment="v0.3&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up">
+    <list default="true" id="c74c62da-847a-4de1-86c6-6ca430962615" name="Changes" comment="v0.4&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up&#10;&#10;added formatting on output to file&#10;&#10;updated gui elements to be displayed concisely">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUITwoUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUITwoUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WriteFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +36,16 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainApp">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainApp" />
+      <module name="TwoUpGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testKodee" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testKodee" />
       <module name="TwoUpGame" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -50,6 +54,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.testKodee" />
       </list>
     </recent_temporary>
   </component>
@@ -83,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652252052033</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="v0.4&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up&#10;&#10;added formatting on output to file&#10;&#10;updated gui elements to be displayed concisely">
+      <created>1652314820337</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652314820337</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,6 +113,7 @@
     <MESSAGE value="v0.1&#10;&#10;small application to run a two up game" />
     <MESSAGE value="v0.2&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content" />
     <MESSAGE value="v0.3&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.3&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up" />
+    <MESSAGE value="v0.4&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up&#10;&#10;added formatting on output to file&#10;&#10;updated gui elements to be displayed concisely" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.4&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up&#10;&#10;added formatting on output to file&#10;&#10;updated gui elements to be displayed concisely" />
   </component>
 </project>
