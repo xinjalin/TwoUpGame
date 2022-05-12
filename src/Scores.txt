@@ -1,1 +1,5 @@
-Thu May 12 09:43:58 ACST 2022 : Players Name Chris : Players Choice x2 Tails : You Lose
+Thu May 12 15:30:57 ACST 2022 : Players Name dazz : Players Choice x2 Tails : You Lose
+Thu May 12 15:31:07 ACST 2022 : Players Name chris : Players Choice x2 Heads : You Lose
+Thu May 12 15:31:08 ACST 2022 : Players Name chris : Players Choice x2 Heads : You Lose
+Thu May 12 15:31:09 ACST 2022 : Players Name chris : Players Choice x2 Heads : Victory
+

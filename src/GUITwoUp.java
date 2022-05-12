@@ -145,16 +145,18 @@ public class GUITwoUp {
                 String selected = "HEADS_HEADS";
                 Game g = new Game();
                 gameResult.setText(g.gameOfTwoUp(coinOne.isHeads(), coinTwo.isHeads(), selected, playerNameTextField.getText()));
+                popperLabel.setVisible(gameResult.getText().equals("Victory"));
             } else if (TAILS_TAILS.isSelected()) {
                 String selected = "TAILS_TAILS";
                 Game g = new Game();
                 gameResult.setText(g.gameOfTwoUp(coinOne.isHeads(), coinTwo.isHeads(), selected, playerNameTextField.getText()));
+                popperLabel.setVisible(gameResult.getText().equals("Victory"));
             }
         });
 
-
         popperLabel.setIcon(popperImg);
         mainDisplay.getContentPane().add(BorderLayout.WEST, popperLabel);
+        popperLabel.setVisible(false);
         // puts menu bar to top of the screen
         mainDisplay.getContentPane().add(BorderLayout.NORTH, mb);
         // puts content to screen
