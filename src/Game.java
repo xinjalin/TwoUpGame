@@ -4,11 +4,11 @@ public class Game {
         if (radioSelection.equals("HEADS_HEADS")) {
             if (coin1 && coin2) {
                 resultOfGame = "Victory";
-                WriteFile.writeFileScores(playerName + " : " + resultOfGame);
+                WriteFile.writeFileScores("Players Name " + playerName + " : Players Choice x2 Heads : " + resultOfGame);
             }
             else if (!coin1 && !coin2) {
                 resultOfGame = "You Lose";
-                WriteFile.writeFileScores(playerName + " : " + resultOfGame);
+                WriteFile.writeFileScores("Players Name " + playerName + " : Players Choice x2 Heads : " + resultOfGame);
             }
             else {
                 resultOfGame = "Roll Again";
@@ -16,11 +16,11 @@ public class Game {
         } else if (radioSelection.equals("TAILS_TAILS")) {
             if (!coin1 && !coin2) {
                 resultOfGame = "Victory";
-                WriteFile.writeFileScores(playerName + " : " + resultOfGame);
+                WriteFile.writeFileScores("Players Name " + playerName + " : Players Choice x2 Tails : " + resultOfGame);
             }
             else if (coin1 && coin2) {
                 resultOfGame = "You Lose";
-                WriteFile.writeFileScores(playerName + " : " + resultOfGame);
+                WriteFile.writeFileScores("Players Name " + playerName + " : Players Choice x2 Tails : " + resultOfGame);
             }
             else {
                 resultOfGame = "Roll Again";

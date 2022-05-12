@@ -70,43 +70,21 @@ public class GUITwoUp {
         menu.add(i3);
         // set font to smaller size
         submenu.add(i4);
-        i4.addActionListener(e -> {
-            coinOneLabel.setFont(new Font("Dialog", Font.BOLD, 9));
-            coinTwoLabel.setFont(new Font("Dialog", Font.BOLD, 9));
-            coinFlipButton.setFont(new Font("Dialog", Font.BOLD, 9));
-            playerNameLabel.setFont(new Font("Dialog", Font.BOLD, 9));
-            HEADS_HEADS.setFont(new Font("Dialog", Font.BOLD, 9));
-            TAILS_TAILS.setFont(new Font("Dialog", Font.BOLD, 9));
-            gameResult.setFont(new Font("Dialog", Font.BOLD, 9));
-        });
+        i4.addActionListener(e -> setFontSize(9));
         // return font to default size
         submenu.add(i5);
-        i5.addActionListener(e -> {
-            coinOneLabel.setFont(new Font("Dialog", Font.BOLD, 12));
-            coinTwoLabel.setFont(new Font("Dialog", Font.BOLD, 12));
-            coinFlipButton.setFont(new Font("Dialog", Font.BOLD, 12));
-            playerNameLabel.setFont(new Font("Dialog", Font.BOLD, 12));
-            HEADS_HEADS.setFont(new Font("Dialog", Font.BOLD, 12));
-            TAILS_TAILS.setFont(new Font("Dialog", Font.BOLD, 12));
-            gameResult.setFont(new Font("Dialog", Font.BOLD, 12));
-        });
+        i5.addActionListener(e -> setFontSize(12));
         // set font to larger size
         submenu.add(i6);
-        i6.addActionListener(e -> {
-            coinOneLabel.setFont(new Font("Dialog",Font.BOLD, 15));
-            coinTwoLabel.setFont(new Font("Dialog", Font.BOLD, 15));
-            coinFlipButton.setFont(new Font("Dialog", Font.BOLD, 15));
-            playerNameLabel.setFont(new Font("Dialog", Font.BOLD, 15));
-            HEADS_HEADS.setFont(new Font("Dialog", Font.BOLD, 15));
-            TAILS_TAILS.setFont(new Font("Dialog", Font.BOLD, 15));
-            gameResult.setFont(new Font("Dialog", Font.BOLD, 15));
-        });
+        i6.addActionListener(e -> setFontSize(15));
         menu.add(submenu);
         mb.add(menu);
 
         // main content layout
         cp.setLayout(gridBag);
         //////////////////// current working on is in grid bag layout
+        c.insets = new Insets(5,0,5,0);
+
         c.gridx = 0;
         c.gridy = 0;
         c.ipadx = 20;
@@ -119,10 +97,18 @@ public class GUITwoUp {
 
         c.gridx = 0;
         c.gridy = 1;
+        coinOneLabel.setPreferredSize(new Dimension(100,20));
+        coinOneLabel.setBorder(BorderFactory.createLineBorder(Color.black));
+        coinOneLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        coinOneLabel.setVerticalAlignment(SwingConstants.CENTER);
         cp.add(coinOneLabel, c);
 
         c.gridx = 1;
         c.gridy = 1;
+        coinTwoLabel.setPreferredSize(new Dimension(100,20));
+        coinTwoLabel.setBorder(BorderFactory.createLineBorder(Color.black));
+        coinTwoLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        coinTwoLabel.setVerticalAlignment(SwingConstants.CENTER);
         cp.add(coinTwoLabel, c);
 
         radioGroup.add(HEADS_HEADS);
@@ -168,5 +154,14 @@ public class GUITwoUp {
         mainDisplay.getContentPane().add(BorderLayout.SOUTH, buttonPanel);
         // sets content visible
         mainDisplay.setVisible(true);
+    }
+    private void setFontSize(int size) {
+        coinOneLabel.setFont(new Font("Dialog", Font.BOLD, size));
+        coinTwoLabel.setFont(new Font("Dialog", Font.BOLD, size));
+        coinFlipButton.setFont(new Font("Dialog", Font.BOLD, size));
+        playerNameLabel.setFont(new Font("Dialog", Font.BOLD, size));
+        HEADS_HEADS.setFont(new Font("Dialog", Font.BOLD, size));
+        TAILS_TAILS.setFont(new Font("Dialog", Font.BOLD, size));
+        gameResult.setFont(new Font("Dialog", Font.BOLD, size));
     }
 }
