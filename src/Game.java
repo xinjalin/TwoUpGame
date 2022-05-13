@@ -11,7 +11,7 @@ public class Game {
                 WriteFile.writeFileScores("Players Name " + playerName + " : Players Choice x2 Heads : " + resultOfGame);
             }
             else {
-                resultOfGame = "Roll Again";
+                resultOfGame = "Flip Again";
             }
         } else if (radioSelection.equals("TAILS_TAILS")) {
             if (!coin1 && !coin2) {
@@ -23,7 +23,7 @@ public class Game {
                 WriteFile.writeFileScores("Players Name " + playerName + " : Players Choice x2 Tails : " + resultOfGame);
             }
             else {
-                resultOfGame = "Roll Again";
+                resultOfGame = "Flip Again";
             }
         }
     return resultOfGame;

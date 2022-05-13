@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c74c62da-847a-4de1-86c6-6ca430962615" name="Changes" comment="v0.5.1&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up&#10;&#10;added formatting on output to file&#10;&#10;updated gui elements to be displayed concisely&#10;&#10;project is close to finished and game functions work still need to junit test.&#10;fixing formatting">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/popper.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/popper_right.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwoUpGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TwoUpGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUITwoUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUITwoUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scores.txt" afterDir="false" />
+    <list default="true" id="c74c62da-847a-4de1-86c6-6ca430962615" name="Changes" comment="v0.6.1&#10;&#10;small application to run a two up game&#10;built main GUI content&#10;added ability to play a game of two up&#10;added formatting on output to file&#10;updated gui elements to be displayed concisely&#10;project is close to finished and game functions work still need to junit test.&#10;fixing formatting&#10;added victory images to left and right">
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652335708564</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="v0.6&#10;&#10;small application to run a two up game&#10;built main GUI content&#10;added ability to play a game of two up&#10;added formatting on output to file&#10;updated gui elements to be displayed concisely&#10;project is close to finished and game functions work still need to junit test.&#10;fixing formatting&#10;added victory images to left and right">
+      <created>1652407506607</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652407506608</updated>
+    </task>
+    <task id="LOCAL-00008" summary="v0.6.1&#10;&#10;small application to run a two up game&#10;built main GUI content&#10;added ability to play a game of two up&#10;added formatting on output to file&#10;updated gui elements to be displayed concisely&#10;project is close to finished and game functions work still need to junit test.&#10;fixing formatting&#10;added victory images to left and right">
+      <created>1652407752301</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652407752301</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +158,8 @@
     <MESSAGE value="v0.4&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up&#10;&#10;added formatting on output to file&#10;&#10;updated gui elements to be displayed concisely" />
     <MESSAGE value="v0.5&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up&#10;&#10;added formatting on output to file&#10;&#10;updated gui elements to be displayed concisely&#10;&#10;project is close to finished and game functions work still need to junit test." />
     <MESSAGE value="v0.5.1&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up&#10;&#10;added formatting on output to file&#10;&#10;updated gui elements to be displayed concisely&#10;&#10;project is close to finished and game functions work still need to junit test.&#10;fixing formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.5.1&#10;&#10;small application to run a two up game&#10;&#10;built main GUI content&#10;&#10;added ability to play a game of two up&#10;&#10;added formatting on output to file&#10;&#10;updated gui elements to be displayed concisely&#10;&#10;project is close to finished and game functions work still need to junit test.&#10;fixing formatting" />
+    <MESSAGE value="v0.6&#10;&#10;small application to run a two up game&#10;built main GUI content&#10;added ability to play a game of two up&#10;added formatting on output to file&#10;updated gui elements to be displayed concisely&#10;project is close to finished and game functions work still need to junit test.&#10;fixing formatting&#10;added victory images to left and right" />
+    <MESSAGE value="v0.6.1&#10;&#10;small application to run a two up game&#10;built main GUI content&#10;added ability to play a game of two up&#10;added formatting on output to file&#10;updated gui elements to be displayed concisely&#10;project is close to finished and game functions work still need to junit test.&#10;fixing formatting&#10;added victory images to left and right" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.6.1&#10;&#10;small application to run a two up game&#10;built main GUI content&#10;added ability to play a game of two up&#10;added formatting on output to file&#10;updated gui elements to be displayed concisely&#10;project is close to finished and game functions work still need to junit test.&#10;fixing formatting&#10;added victory images to left and right" />
   </component>
 </project>
