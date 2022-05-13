@@ -143,14 +143,12 @@ public class GUITwoUp {
                 gameResult.setText(g.gameOfTwoUp(coinOne.isHeads(), coinTwo.isHeads(), selected, playerNameTextField.getText()));
                 popperLabelLeft.setVisible(gameResult.getText().equals("Victory"));
                 popperLabelRight.setVisible(gameResult.getText().equals("Victory"));
-
             } else if (TAILS_TAILS.isSelected()) {
                 String selected = "TAILS_TAILS";
                 Game g = new Game();
                 gameResult.setText(g.gameOfTwoUp(coinOne.isHeads(), coinTwo.isHeads(), selected, playerNameTextField.getText()));
                 popperLabelLeft.setVisible(gameResult.getText().equals("Victory"));
                 popperLabelRight.setVisible(gameResult.getText().equals("Victory"));
-
             }
         });
 
