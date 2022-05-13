@@ -1,5 +1,8 @@
-Thu May 12 15:30:57 ACST 2022 : Players Name dazz : Players Choice x2 Tails : You Lose
-Thu May 12 15:31:07 ACST 2022 : Players Name chris : Players Choice x2 Heads : You Lose
-Thu May 12 15:31:08 ACST 2022 : Players Name chris : Players Choice x2 Heads : You Lose
-Thu May 12 15:31:09 ACST 2022 : Players Name chris : Players Choice x2 Heads : Victory
-
+Fri May 13 11:13:11 ACST 2022 : Players Name c : Players Choice x2 Heads : Victory
+Fri May 13 11:13:48 ACST 2022 : Players Name  : Players Choice x2 Heads : Victory
+Fri May 13 11:17:15 ACST 2022 : Players Name  : Players Choice x2 Heads : You Lose
+Fri May 13 11:17:16 ACST 2022 : Players Name  : Players Choice x2 Heads : Victory
+Fri May 13 11:17:39 ACST 2022 : Players Name  : Players Choice x2 Heads : Victory
+Fri May 13 11:18:00 ACST 2022 : Players Name  : Players Choice x2 Heads : Victory
+Fri May 13 11:19:47 ACST 2022 : Players Name  : Players Choice x2 Heads : Victory
+Fri May 13 11:20:15 ACST 2022 : Players Name  : Players Choice x2 Heads : Victory

@@ -5,8 +5,8 @@ public class GUITwoUp {
     private final int width;
     private final int height;
     private final JMyFrame mainDisplay;
-    private final JMenu menu, submenu;
-    private final JMenuItem i1, i2, i3, i4, i5, i6;
+    private final JMenu menuFontSize;
+    private final JMenuItem i1, i2, i3;
     private final JMenuBar mb;
     private final Container cp;
     private final GridBagLayout gridBag;
@@ -20,22 +20,20 @@ public class GUITwoUp {
     private final JRadioButton HEADS_HEADS, TAILS_TAILS;
     private final ButtonGroup radioGroup;
     private final Coin coinOne = new Coin(), coinTwo = new Coin();
-    private final ImageIcon popperImg;
-    private final JLabel popperLabel;
+    private final ImageIcon popperImgLeft;
+    private final JLabel popperLabelLeft;
+    private final ImageIcon popperImgRight;
+    private final JLabel popperLabelRight;
 
     public GUITwoUp(int w,int h) {
         mainDisplay = new JMyFrame();
 
         mb = new JMenuBar();
-        menu = new JMenu("Menu");
-        submenu = new JMenu("Font Size");
+        menuFontSize = new JMenu("Font Size");
 
-        i1 = new JMenuItem("item 1");
-        i2 = new JMenuItem("item 2");
-        i3 = new JMenuItem("item 3");
-        i4 = new JMenuItem("Small");
-        i5 = new JMenuItem("Default");
-        i6 = new JMenuItem("Large");
+        i1 = new JMenuItem("Small");
+        i2 = new JMenuItem("Default");
+        i3 = new JMenuItem("Large");
 
         cp = new Container();
         gridBag = new GridBagLayout();
@@ -60,8 +58,11 @@ public class GUITwoUp {
         width = w;
         height = h;
 
-        popperImg = new ImageIcon(new ImageIcon("images\\popper.gif").getImage().getScaledInstance(75,75,Image.SCALE_DEFAULT));
-        popperLabel = new JLabel();
+        popperImgLeft = new ImageIcon(new ImageIcon("images\\popper.gif").getImage().getScaledInstance(75,75,Image.SCALE_DEFAULT));
+        popperLabelLeft = new JLabel();
+
+        popperImgRight = new ImageIcon(new ImageIcon("images\\popper_right.gif").getImage().getScaledInstance(75,75,Image.SCALE_DEFAULT));
+        popperLabelRight = new JLabel();
     }
 
     public void setUpGUI() {
@@ -70,30 +71,25 @@ public class GUITwoUp {
         mainDisplay.setTitle("Two Up");
         // top nav / menu options
         // adding menuItems to menu and submenu
-        menu.add(i1);
-        menu.add(i2);
-        menu.add(i3);
 
-        submenu.add(i4);
-        i4.addActionListener(e -> setFontSize(9));
+        menuFontSize.add(i1);
+        i1.addActionListener(e -> setFontSize(9));
         // return font to default size
-        submenu.add(i5);
-        i5.addActionListener(e -> setFontSize(12));
+        menuFontSize.add(i2);
+        i2.addActionListener(e -> setFontSize(12));
         // set font to larger size
-        submenu.add(i6);
-        i6.addActionListener(e -> setFontSize(15));
-        menu.add(submenu);
-        mb.add(menu);
+        menuFontSize.add(i3);
+        i3.addActionListener(e -> setFontSize(15));
+
+        mb.add(menuFontSize);
 
         // main content layout
         cp.setLayout(gridBag);
         //////////////////// current working on is in grid bag layout
-        c.insets = new Insets(5,0,5,0);
+        c.insets = new Insets(5,5,5,5);
 
         c.gridx = 0;
         c.gridy = 0;
-        c.ipadx = 20;
-        c.ipady = 5;
         cp.add(playerNameLabel, c);
 
         c.gridx = 1;
@@ -145,18 +141,27 @@ public class GUITwoUp {
                 String selected = "HEADS_HEADS";
                 Game g = new Game();
                 gameResult.setText(g.gameOfTwoUp(coinOne.isHeads(), coinTwo.isHeads(), selected, playerNameTextField.getText()));
-                popperLabel.setVisible(gameResult.getText().equals("Victory"));
+                popperLabelLeft.setVisible(gameResult.getText().equals("Victory"));
+                popperLabelRight.setVisible(gameResult.getText().equals("Victory"));
+
             } else if (TAILS_TAILS.isSelected()) {
                 String selected = "TAILS_TAILS";
                 Game g = new Game();
                 gameResult.setText(g.gameOfTwoUp(coinOne.isHeads(), coinTwo.isHeads(), selected, playerNameTextField.getText()));
-                popperLabel.setVisible(gameResult.getText().equals("Victory"));
+                popperLabelLeft.setVisible(gameResult.getText().equals("Victory"));
+                popperLabelRight.setVisible(gameResult.getText().equals("Victory"));
+
             }
         });
 
-        popperLabel.setIcon(popperImg);
-        mainDisplay.getContentPane().add(BorderLayout.WEST, popperLabel);
-        popperLabel.setVisible(false);
+        popperLabelLeft.setIcon(popperImgLeft);
+        mainDisplay.getContentPane().add(BorderLayout.WEST, popperLabelLeft);
+        popperLabelLeft.setVisible(false);
+
+        popperLabelRight.setIcon(popperImgRight);
+        mainDisplay.getContentPane().add(BorderLayout.EAST, popperLabelRight);
+        popperLabelRight.setVisible(false);
+
         // puts menu bar to top of the screen
         mainDisplay.getContentPane().add(BorderLayout.NORTH, mb);
         // puts content to screen
