@@ -32,13 +32,13 @@ public class TestGame {
 
         assertEquals("Victory", game.gameOfTwoUp(true, true, HH, testPlayer));
         assertEquals("You Lose", game.gameOfTwoUp(false, false, HH, testPlayer));
-        assertEquals("Roll Again", game.gameOfTwoUp(true, false, HH, testPlayer));
-        assertEquals("Roll Again", game.gameOfTwoUp(false, true, HH, testPlayer));
+        assertEquals("Flip Again", game.gameOfTwoUp(true, false, HH, testPlayer));
+        assertEquals("Flip Again", game.gameOfTwoUp(false, true, HH, testPlayer));
 
         assertEquals("Victory", game.gameOfTwoUp(false, false, TT, testPlayer));
         assertEquals("You Lose", game.gameOfTwoUp(true, true, TT, testPlayer));
-        assertEquals("Roll Again", game.gameOfTwoUp(true, false, TT, testPlayer));
-        assertEquals("Roll Again", game.gameOfTwoUp(false, true, TT, testPlayer));
+        assertEquals("Flip Again", game.gameOfTwoUp(true, false, TT, testPlayer));
+        assertEquals("Flip Again", game.gameOfTwoUp(false, true, TT, testPlayer));
     }
 
 }
